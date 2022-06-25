@@ -39,7 +39,7 @@
 
     @if(session()->has('loginError'))
     <div class="alert alert-danger" role="alert">
-     {{session('loginErro')}}
+     {{session('loginError')}}
  </div>
      @endif
 
