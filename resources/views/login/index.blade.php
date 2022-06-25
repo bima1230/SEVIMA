@@ -33,6 +33,7 @@
    @if(session()->has('success'))
    <div class="alert alert-success" role="alert">
     {{session('success')}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
     @endif
 
@@ -40,12 +41,13 @@
     @if(session()->has('loginError'))
     <div class="alert alert-danger" role="alert">
      {{session('loginError')}}
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>  
  </div>
      @endif
+ 
 
 
-
-
+    <div>
     <main class="form-signin w-100 m-auto">
       <form action="/login" method="post">
         @csrf
@@ -63,7 +65,7 @@
         <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
       </form>
     </main>
-   
+      </div>
 
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
